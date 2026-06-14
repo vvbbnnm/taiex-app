@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>台股加權指數</title>
+
+<style>
+body{
+font-family:-apple-system;
+background:#111;
+color:white;
+text-align:center;
+padding-top:80px;
+}
+
+h1{
+font-size:28px;
+}
+
+#index{
+font-size:56px;
+font-weight:bold;
+margin:30px;
+}
+
+#time{
+color:#aaa;
+font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>台股加權指數</h1>
+
+<div id="index">載入中...</div>
+
+<div id="time"></div>
+
+<script>
+
+function updateDemo(){
+
+const value=
+(22000+Math.random()*800).toFixed(2);
+
+document.getElementById("index").innerText=value;
+
+document.getElementById("time").innerText=
+"更新時間："+new Date().toLocaleTimeString();
+}
+
+updateDemo();
+
+setInterval(updateDemo,30000);
+
+</script>
+
+</body>
+</html>
